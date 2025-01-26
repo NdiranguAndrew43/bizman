@@ -66,7 +66,7 @@ class InventoryView(LoginRequiredMixin, View):
         """
         items = InventoryItem.objects.filter(user=self.request.user.id).order_by('name')
 
-        return render(request, 'inventory.html', {'items': items})
+        return render(request, 'Inventory.html', {'items': items})
 
 class AddItem(LoginRequiredMixin, CreateView):
     """
