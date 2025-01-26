@@ -1,0 +1,50 @@
+{% load crispy_forms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">BIZMAN</a></li>
+        </ul>
+    </nav>
+    <body>
+        <div class="row">
+            <div class="col-11 col-md-4 mx-auto mt-5">
+                <h1>Sign Up</h1>
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{ error|escape }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+    
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+    
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                </form>
+    
+                <div class="pt-3">
+                    <small class="text-muted">Already a user ? <a href="/login/" class="ml-2">login</a></small>
+                </div>
+            </div>
+        </div>       
+    </body>
+</html>

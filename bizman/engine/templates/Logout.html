@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIZMAN</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+</head>
+<html>
+    {% block content %}
+    <div class="row">
+        <div class="col-11 col-md-4 mx-auto mt-5">
+            <h2>You Have Been Logged Out</h2>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a href="{% url 'login' %}">Log In Again</a>
+                </small>
+            </div>'
+        </div>
+    </div>
+    {% endblock content %}
+</html>

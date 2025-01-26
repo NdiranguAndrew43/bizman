@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'styles/dash.css' %}">
+</head>
+    <header>
+            {% include 'Navigation.html' %}
+            {% block content %}
+            {% endblock content %}
+    </header>
+    <body>
+        <div class="container">
+            <main>
+                <h1>WELCOME {{ username }},</h1>
+                <section id="inventory">
+                    <div class="card">
+                        <h2>Inventory</h2>
+                        <p>
+                            Enter and keep track of any range of items through the Inventory tab.
+                        </p>
+                    </div>
+                </section>
+                <section id="transactions">
+                    <div class="card">
+                        <h2>Transactions</h2>
+                        <p>
+                            Keep track of your cash flow, and record transactions related to it through the Transactions tab.
+                        </p>
+                    </div>
+                </section>
+        
+                <section id="events">
+                    <div class="card">
+                        <h2>Events</h2>
+                        <p>
+                            Enter date events for easier references and deadline trackings through the Events tab.
+                        </p>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2025 BIZMAN by PHOENIXCORP. All Rights Reserved.</p>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIZMAN</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/touchupLanding.css' %}">
+</head>
+<body>
+    <header>
+        <h1>BIZMAN</h1>
+    </header>
+    <nav>
+      <ul>
+          <li><a href="/signup/">Sign Up</a></li>
+          <li><a href="/login/">Sign In</a></li>
+      </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2><i>UTILITY ON THE MOVE</i></h2>
+                <p>Easily keep track of your inventory, create trancaction summaries, and stay ontop of event schedulling all in one place.</p>
+            </div>
+        </section>
+        <h2>Our Features</h2>
+        <section class="features">
+            <div class="feature">
+                <h3>Inventory Keeping</h3>
+                <p><i>Seamlessly keep track of items by creating easy inventory lists.</i></p>
+            </div>
+            <div class="feature">
+                <h3>Transcaction Summaries</h3>
+                <p><i>Simple bookkeeping that prompts you to better understand your fiscal identity.</i></p>
+            </div>
+            <div class="feature">
+                <h3>Schedule and Events</h3>
+                <p><i>Make event entries to track deadlines and upcoming events.</i></p>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-text">
+                <a href="/signup/" class="btn btn-primary">Get Started Now</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 BIZMAN by PHOENIXCORP. All Rights Reserved.</p>
+    </footer>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>

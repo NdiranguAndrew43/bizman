@@ -1,0 +1,35 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'styles/editItem.css' %}">
+    </head>
+    <body>
+        <div>
+            <a href="{% url 'inventory' %}" class="btn btn-outline-primary my-3 mx-4">Go back</a>
+            <div class="row">
+                <form method="POST" class="col-sm-11 col-md-4 mx-auto mt-5">
+                    {% csrf_token %}
+                    <h1 class="fw-light">Are you sure you want to delete {{ item.name }}?</h1>
+                    <p class="fw-light">This cannot be undone</p>
+    
+                    <div>
+                        <button class="btn btn-danger">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>
